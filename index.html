@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JameExchange | ~名義集めに悩むジャニオタさんへのアプリ~</title>
+    <meta name="description" content="ジャニオタの友達が少なくて名義集めができない。。　もっと名義を増やしたいという方に向けてのサービスです">
+    <link rel="icon" href="image/title-icon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <!-- fontawesomeCDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- index.htmlページすべてのトップページ -->
+
+<body>
+    <div id="index-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title index-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style login-btn">ログイン</a>
+                    <a class="nav-title-hidden nav-style signup-btn">新規登録</a>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font login-btn">ログイン</a></li>
+                            <li><a class="nav-title signup-font signup-btn">新規登録</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="top-image">
+            <div class="text-center-toppage">
+                <section>
+                    <h1><div class="animate-title">JameExchange</div></h1>
+                </section>
+                <h2>~名義集めに悩むジャニオタさんへのアプリ~</h2>
+                <a class="btn btn-lg top-button btn-signup signup-btn">新規登録</a>
+                <a class="btn btn-lg top-button btn-login login-btn">ログイン</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ログイン画面HTML -->
+    <div id="login-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title index-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style signup-btn">新規登録</a>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font signup-btn">新規登録</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row top-image signup-main">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="text-center">
+                    <h1 class="signup-font">ログイン</h1>
+                </div>
+                <form id="login-form">
+                    <div class="form-group login__email">
+                        <label for="login-email" class="col-form-label">
+                            メールアドレス
+                        </label>
+                        <div>
+                            <input id="login-email" type="email" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group login__password">
+                        <label for="login-password" class="col-form-label">
+                            パスワード
+                        </label>
+                        <div>
+                            <input id="login-password" type="password" class="form-control" required>
+                        </div>
+                    </div>
+                    <div id="login__help" class="alert alert-danger"></div>
+                    <div class="form-group login__submit">
+                        <div>
+                            <input type="submit" value="ログイン" class="btn btn-block top-button signup-font">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新規登録ページHTML -->
+    <div id="signup-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title index-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style login-btn">ログイン</a>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font login-btn">ログイン</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <div class="row top-image signup-main">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="text-center">
+                    <h1 class="signup-font">新規登録</h1>
+                </div>
+                <form id="signup-form">
+                    <div class="form-group">
+                        <label for="user_name" class="signup-font">名前</label>
+                        <input class="form-control" type="text" id="user-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="user_email" class="signup-font">メールアドレス</label>
+                        <input class="form-control" type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="user_password" class="signup-font">パスワード</label>
+                        <input class="form-control" type="password" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="user_password" class="signup-font">取引用に使用したいTwitterアカウントID</label>
+                        <input class="form-control" type="text" id="twitter-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="user_password" class="signup-font">自己紹介</label>
+                        <textarea class="form-control" id="profile-introduction" name="kanso" rows="4"
+                            cols="40">（例）Kansai / u20　♡〇〇担♡</textarea>
+                    </div>
+                    <!-- <div class="form-group">
+                        <label for="user_password_confirmation" class="signup-font">確認（もう一度入力してください）</label>
+                        <input class="form-control" type="password">
+                    </div> -->
+                    <div class="form-group" name="form1">
+                        <p for="fan_club" class="signup-font">ファンクラブ会員になっているグループ</p>
+                        <input type="checkbox" name="fanItem" value="木村拓哉">木村拓哉
+                        <input type="checkbox" name="fanItem" value="TOKIO">TOKIO
+                        <input type="checkbox" name="fanItem" value="KinKiKids">KinKiKids
+                        <input type="checkbox" name="fanItem" value="嵐">嵐
+                        <input type="checkbox" name="fanItem" value="KAT-TUN">KAT-TUN
+                        <input type="checkbox" name="fanItem" value="NEWS">NEWS
+                        <input type="checkbox" name="fanItem" value="Hey! Say! JUMP">Hey! Say! JUMP
+                        <input type="checkbox" name="fanItem" value="関ジャニ∞">関ジャニ∞
+                        <input type="checkbox" name="fanItem" value="Kis-My-Ft2">Kis-My-Ft2
+                        <input type="checkbox" name="fanItem" value="SexyZone">SexyZone
+                        <input type="checkbox" name="fanItem" value="A.B.C-Z">A.B.C-Z
+                        <input type="checkbox" name="fanItem" value="ジャニーズWEST">ジャニーズWEST
+                        <input type="checkbox" name="fanItem" value="King&Prince">King&Prince
+                        <input type="checkbox" name="fanItem" value="SixTONES">SixTONES
+                        <input type="checkbox" name="fanItem" value="SnowMan">SnowMan <br>
+                        <input type="checkbox" name="fanItem" value="ジャニーズジュニア情報局">ジャニーズジュニア情報局
+
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <label for="user_Upload Image:" class="signup-font">アイコン設定</label>
+                            <br>
+                            <span style="font-size: 15px;">
+                                <input type="file" name="user[image_name]" id="user_image_name">
+                            </span>
+                        </p>
+                    </div>
+                    <input type="submit" value="新規登録" class="btn btn-block top-button signup-font">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOPページHTML -->
+    <div id="top-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title top-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style top-btn">TOP</a>
+                    <a class="nav-title-hidden nav-style post-btn">募集</a>
+                    <a class="dropdown-toggle drop-menu nav-title-hidden drop-menu-style" role="button"
+                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="card-name-title"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                        <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                        <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                    </ul>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font top-btn">TOP</a></li>
+                            <li><a class="nav-title signup-font post-btn">募集</a></li>
+                            <li><a class="dropdown-toggle drop-menu" style="padding-left: 0;" role="button"
+                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="card-name-title"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                                    <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                                    <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="top-page">
+                <div class="top-title-arasi">
+                    <h2>嵐</h2>
+                    <div class="hide">
+                        <div class="top-col row" id="post-template">
+                            <div class="post-item top-card">
+                                <div class="post-item__image-wrapper">
+                                    <a><img class="post-item__image user-profile-btn" alt=""></a>
+                                </div>
+                                <span class="top-user-log">Name</span>
+                                <div class="top-user-name" style="display: inline;"></div><br>
+                                <span class="top-user-log">Title</span>
+                                <div class="post-item__title" style="display: inline;"></div><br>
+                                <span class="top-user-log">内容</span>
+                                <div class="introduction-item" style="display: inline;"></div>
+                                <div class="post-item__delete-wrapper hide">
+                                    <button class="btn-delete post-item__delete">
+                                        <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                        削除
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-col row" id="book-arasi">
+
+                    </div>
+                </div>
+
+                <div class="top-title2">
+                    <h2>ジャニーズジュニア情報局</h2>
+
+                    <div class="top-col row" id="book-jr">
+
+                    </div>
+                </div>
+
+
+                <div class="top-title3">
+                    <h2>関ジャニ∞</h2>
+
+                    <div class="top-col row" id="book-kanjani">
+
+                    </div>
+                </div>
+
+                <div class="top-title4">
+                    <h2>King&Prince</h2>
+
+                    <div class="top-col row" id="book-kinpri">
+
+                    </div>
+                </div>
+
+                <div class="top-title5">
+                    <h2>Hey! Say! JUMP</h2>
+
+                    <div class="top-col row" id="book-jump">
+
+                    </div>
+                </div>
+
+                <div class="top-title6">
+                    <h2>KinKi Kids</h2>
+
+                    <div class="top-col row" id="book-kinkikids">
+
+                    </div>
+                </div>
+
+                <div class="top-title7">
+                    <h2>Kis-My-Ft2</h2>
+
+                    <div class="top-col row" id="book-kisMy">
+
+                    </div>
+                </div>
+
+                <div class="top-title8">
+                    <h2>SnowMan</h2>
+
+                    <div class="top-col row" id="book-Snowman">
+
+                    </div>
+                </div>
+
+                <div class="top-title9">
+                    <h2>NEWS</h2>
+
+                    <div class="top-col row" id="book-news">
+
+                    </div>
+                </div>
+
+                <div class="top-title10">
+                    <h2>Sexy Zone</h2>
+
+                    <div class="top-col row" id="book-sexy-zone">
+
+                    </div>
+                </div>
+
+                <div class="top-title11">
+                    <h2>ジャニーズWEST</h2>
+
+                    <div class="top-col row" id="book-west">
+
+                    </div>
+                </div>
+
+                <div class="top-title12">
+                    <h2>V6</h2>
+
+                    <div class="top-col row" id="book-v6">
+
+                    </div>
+                </div>
+
+                <div class="top-title13">
+                    <h2>SixTONES</h2>
+
+                    <div class="top-col row" id="book-six-tones">
+
+                    </div>
+                </div>
+
+                <div class="top-title14">
+                    <h2>KAT-TUN</h2>
+
+                    <div class="top-col row" id="book-KAT-TUN">
+
+                    </div>
+                </div>
+
+                <div class="top-title15">
+                    <h2>TOKIO</h2>
+
+                    <div class="top-col row" id="book-TOKIO">
+
+                    </div>
+                </div>
+
+                <div class="top-title16">
+                    <h2>A.B.C-Z</h2>
+
+                    <div class="top-col row" id="book-ABC">
+
+                    </div>
+                </div>
+
+                <div class="top-title17">
+                    <h2>木村拓哉</h2>
+
+                    <div class="top-col row" id="book-kimura">
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- 自身のプロフィール画面HTML-->
+    <div id="my-profile-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title top-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style top-btn">TOP</a>
+                    <a class="nav-title-hidden nav-style post-btn">募集</a>
+                    <a class="dropdown-toggle drop-menu nav-title-hidden drop-menu-style" role="button"
+                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="card-name-title"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                        <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                    </ul>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font top-btn">TOP</a></li>
+                            <li><a class="nav-title signup-font post-btn">募集</a></li>
+                            <li><a class="dropdown-toggle drop-menu" style="padding-left: 0;" role="button"
+                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="card-name-title"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                                    <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="profile-main row">
+                <div class="profile-icon col-lg-4 col-md-6 col-sm-12" id="my-profile-icon">
+                    <div class="card" style="width: 18rem;">
+                        <img class="profile-img-top" alt="..." src="image/muji.png">
+                        <div id="card-body">
+                            <span class="top-user-log">Name</span>
+                            <h2 class="card-name-title"></h2>
+                            <span class="top-user-log">TwitterアカウントID</span>
+                            <h3 class="twitter-name" style="font-size: 25px;"></h3>
+                            <span class="top-user-log">自己紹介</span>
+                            <p class="my-profile-introduction"></p>
+                            <span class="top-user-log">入っているファンクラブ</span>
+                            <p class="my-profile-fanclub"></p>
+                            <div class="edit-btn" style="margin:15px 0px;">
+                                <a class="btn profile-edit-btn">プロフィール編集</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-tab col-lg-8 col-md-6 col-sm-12">
+                    <a style="text-decoration: none;display: block;"><button
+                            class="btn top-btn post-btn top-btn">募集する</button></a>
+                    <!-- <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            募集済み
+                        </div>
+                    </nav> -->
+
+
+                    <div class="tab-content" id="nav-tabContent">
+                        <h2>募集済み</h2>
+                        <div class="hide">
+                            <div class="top-col row" id="my-post">
+                                <div class="post-item top-card">
+                                    <div class="post-item__image-wrapper">
+                                        <a><img class="post-item__image user-profile-btn" alt=""></a>
+                                    </div>
+                                    <span class="top-user-log">Name</span>
+                                    <div class="top-user-name" style="display: inline;"></div><br>
+                                    <span class="top-user-log">Title</span>
+                                    <div class="post-item__title" style="display: inline;"></div><br>
+                                    <span class="top-user-log">内容</span>
+                                    <div class="introduction-item" style="display: inline;"></div>
+                                    <div class="post-item__delete-wrapper">
+                                        <button class="btn-delete  post-item__delete">
+                                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                                            削除
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ここに表示させる -->
+                        <div class="top-col row" id="my-post-list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- プロフィール編集画面HTML -->
+    <div id="profile-edit-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title top-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style top-btn">TOP</a>
+                    <a class="nav-title-hidden nav-style post-btn">募集</a>
+                    <a class="dropdown-toggle drop-menu nav-title-hidden drop-menu-style" role="button"
+                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="card-name-title"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                        <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                        <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                    </ul>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font top-btn">TOP</a></li>
+                            <li><a class="nav-title signup-font post-btn">募集</a></li>
+                            <li><a class="dropdown-toggle drop-menu" style="padding-left: 0;" role="button"
+                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="card-name-title"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                                    <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                                    <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <form id="edit-form">
+                <div class="edit-main top-post">
+                    <h2>プロフィール編集</h2>
+                    <div class="edit-name post-card">
+                        <p>Name</p>
+                        <input type="text" class="form-control" id="edit-name">
+                    </div>
+                    <div class="edit-twitter post-card">
+                        <p>TwitterアカウントID</p>
+                        <input type="text" class="form-control" id="edit-twitter">
+                    </div>
+                    <div class="edit-introduction post-card">
+                        <p>あなたの自己紹介を書いてください</p>
+                        <textarea class="form-control" name="edit-introduction" id="edit-introduction" cols="20"
+                            rows="8"></textarea>
+                    </div>
+                    <div class="form-group" name="form1">
+                        <p for="fan_club" class="signup-font">ファンクラブ会員になっているグループ</p>
+                        <input type="checkbox" name="fanItem" value="木村拓哉">木村拓哉
+                        <input type="checkbox" name="fanItem" value="TOKIO">TOKIO
+                        <input type="checkbox" name="fanItem" value="KinKiKids">KinKiKids
+                        <input type="checkbox" name="fanItem" value="嵐">嵐
+                        <input type="checkbox" name="fanItem" value="KAT-TUN">KAT-TUN
+                        <input type="checkbox" name="fanItem" value="NEWS">NEWS
+                        <input type="checkbox" name="fanItem" value="Hey! Say! JUMP">Hey! Say! JUMP
+                        <input type="checkbox" name="fanItem" value="関ジャニ∞">関ジャニ∞
+                        <input type="checkbox" name="fanItem" value="Kis-My-Ft2">Kis-My-Ft2
+                        <input type="checkbox" name="fanItem" value="SexyZone">SexyZone
+                        <input type="checkbox" name="fanItem" value="A.B.C-Z">A.B.C-Z
+                        <input type="checkbox" name="fanItem" value="ジャニーズWEST">ジャニーズWEST
+                        <input type="checkbox" name="fanItem" value="King&Prince">King&Prince
+                        <input type="checkbox" name="fanItem" value="SixTONES">SixTONES
+                        <input type="checkbox" name="fanItem" value="SnowMan">SnowMan <br>
+                        <input type="checkbox" name="fanItem" value="ジャニーズジュニア情報局">ジャニーズジュニア情報局
+
+                    </div>
+
+                    <div class="edit-icon post-card">
+                        <p>プロフィール画像を選んでください</p>
+                        <input class="upload_button" type="file" id="edit-image">
+                    </div>
+                    <!-- <a  class="nav-title signup-font btn-post top-btn">変更完了</a> -->
+
+                    <button id="submit-edit" type="submit"
+                        class="nav-title signup-font btn-post btn btn-default btn-success btn-block">
+                        変更完了
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- 募集画面HTML -->
+    <div id="post-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title top-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style top-btn">TOP</a>
+                    <a class="dropdown-toggle drop-menu nav-title-hidden drop-menu-style" role="button"
+                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="card-name-title"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                        <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                        <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                    </ul>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font top-btn">TOP</a></li>
+                            <li><a class="dropdown-toggle drop-menu" style="padding-left: 0;" role="button"
+                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="card-name-title"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                                    <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                                    <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="top-post">
+                <h2>募集してみよう！</h2>
+                <form id="post-form">
+                    <div class="post-name post-card">
+                        <p>ニックネーム:</p>
+                        <input id="add-book-name" type="text" class="form-control" required>
+                    </div>
+
+                    <div class="post-title post-card">
+                        <p>タイトル:</p>
+                        <input id="add-book-title" type="text" class="form-control" required>
+                    </div>
+                    <div class="post-category post-card">
+                        <p>グループ名:</p>
+                        <select id="select">
+                            <option value>選択</option>
+                            <option value="木村拓哉">木村拓哉</option>
+                            <option value="TOKIO">TOKIO</option>
+                            <option value="KinKiKids">KinKiKids</option>
+                            <option value="V6">V6</option>
+                            <option value="嵐">嵐</option>
+                            <option value="KAT-TUN">KAT-TUN</option>
+                            <option value="NEWS">NEWS</option>
+                            <option value="関ジャニ∞">関ジャニ∞</option>
+                            <option value="Hey!Say!Jump">Hey!Say!JUMP</option>
+                            <option value="Kis-My-Ft2">Kis-My-Ft2</option>
+                            <option value="SexyZone">SexyZone</option>
+                            <option value="A.B.C-Z">A.B.C-Z</option>
+                            <option value="ジャニーズWEST">ジャニーズWEST</option>
+                            <option value="King&Prince">King&Prince</option>
+                            <option value="SixTONES">SixTONES</option>
+                            <option value="SnowMan">SnowMan</option>
+                            <option value="ジャニーズジュニア情報局">ジャニーズジュニア情報局</option>
+                        </select>
+                    </div>
+                    <div class="post-introduction post-card">
+                        <p>説明:</p>
+                        <textarea id="add-book-description" type="text" class="form-control" required></textarea>
+                    </div>
+                    <p>サムネイル画像:</p>
+                    <div class="custom-file">
+                        <input id="add-book-image" type="file"
+                            accept=".jpg,.jpeg,.png,.gif, image/jpeg,image/png,image/gif" class="custom-file-input"
+                            required>
+                        <label id="add-book-image-label" class="custom-file-label" for="add-book-image">ファイルを選択</label>
+                    </div>
+                    <!-- <a  class="nav-title signup-font post-btn">募集する</a> -->
+
+                    <button id="submit_add_book" type="submit"
+                        class="nav-title signup-font btn-post btn btn-default btn-success btn-block">
+                        募　　　集
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- ユーザーのプロフィール画面HTML-->
+    <div id="user-profile-html">
+        <header>
+            <nav class="nav-bar">
+                <div class="nav-item">
+                    <a class="nav-title top-btn">Jame Exchange</a>
+                    <a class="nav-title-hidden nav-style top-btn">TOP</a>
+                    <a class="nav-title-hidden nav-style post-btn">募集</a>
+                    <a class="dropdown-toggle drop-menu nav-title-hidden drop-menu-style" role="button"
+                        id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="card-name-title"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                        <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                        <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                    </ul>
+
+                    <div class="nav-item-hidden header-nav nav-block" id="nav-show">
+                        <ul class="nav-show-ul">
+                            <li><a class="nav-title signup-font top-btn">TOP</a></li>
+                            <li><a class="nav-title signup-font post-btn">募集</a></li>
+                            <li><a class="dropdown-toggle drop-menu" style="padding-left: 0;" role="button"
+                                    id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="card-name-title"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item my-profile-btn">プロフィール</a></li>
+                                    <!-- <li><a class="dropdown-item my-profile-btn">取引き</a></li> -->
+                                    <li><a class="dropdown-item logout-button">ログアウト</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav-tab">
+                    <button class="nav-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="profile-main row">
+                <div class="profile-icon col-lg-4 col-md-6 col-sm-12" id="user-profile-icon">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img class="profile-img-top" alt="..." src="image/muji.png">
+                            <!-- <h2 class="card-title">shin</h2> -->
+                            <span class="top-user-log">Name</span>
+                            <h3 class="user-profile-name" style="margin-bottom: 0px;"></h3><br>
+                            <span class="top-user-log">TwitterアカウントID</span>
+                            <h3 class="user-profile-twitter" style="font-size: 25px;"></h3>
+                            <span class="top-user-log" style="margin-bottom: 0px;">自己紹介</span>
+                            <p class="user-profile-introduction" style="margin-bottom: 0px;"></p><br>
+                            <span class="top-user-log">入っているファンクラブ</span>
+                            <div class="user-profile-fanclub"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Firebaseのセットアップコード（下記のSDKのバージョンは6.2.0） -->
+    <!-- The core Firebase JS SDK is always required and must be listed first
+        (中心となるFirebase SDKです。常に必要で、最初に記述する必要があります) -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app
+        (使いたいFirebaseサービス用のSDKを加えます) -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+
+    <!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyALNovpbn2XddvsZgzT6Y0tCoFh3xEJAJg",
+            authDomain: "jame-exchange-fb610.firebaseapp.com",
+            databaseURL: "https://jame-exchange-fb610-default-rtdb.firebaseio.com",
+            projectId: "jame-exchange-fb610",
+            storageBucket: "jame-exchange-fb610.appspot.com",
+            messagingSenderId: "703184254896",
+            appId: "1:703184254896:web:3e285b590d47768e810875",
+            measurementId: "G-CR9ZXCM8RB"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Popper.js, 次に Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="main.js"></script>
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+</body>
+
+</html>

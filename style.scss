@@ -1,0 +1,1007 @@
+@import "_mixin";
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Limelight", cursive;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+}
+.btn:hover {
+  opacity: 0.8;
+  color: white;
+}
+.btn {
+  background-color: #E93B81 !important;
+}
+
+.btn-delete {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #FFE194;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+
+    &:hover {
+      background-color: #6d6108;
+      color: white;
+    }
+}
+
+// ページを隠す処理
+#login-html,
+#signup-html,
+#top-html,
+#user-html,
+#my-profile-html,
+#profile-edit-html,
+#user-profile-html,
+#post-html {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+header {
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b6c9f0 !important;
+
+  .nav-bar {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    // padding: 0.5rem 1rem;
+    color: white;
+
+    .nav-style {
+      padding: 10px 25px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      align-items: center;
+    }
+    .nav-title {
+      padding: 10px 0;
+      margin-right: 30px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      align-items: center;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .nav-item {
+      .nav-item-hidden {
+        display: none;
+      }
+      .nav-hidden {
+        display: none;
+      }
+    }
+    .nav-show-ul {
+      list-style: none;
+    }
+
+    .nav-tab {
+      padding: 13px 0;
+      height: 35px;
+      .nav-menu {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+
+          & > span {
+            background-color: black;
+            width: 35px;
+            height: 2px;
+            display: block;
+            margin-bottom: 9px;
+            transition: transform 0.7s;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+      }
+    }
+  }
+}
+
+.menu-open {
+  // background-color: black;
+  // opacity: 0.7;
+
+  .nav-menu {
+    & > span {
+      background-color: white;
+
+      &:nth-child(1) {
+        transform: translateY(11px) rotate(135deg);
+      }
+      &:nth-child(2) {
+        transform: translateX(-18px) scaleX(0);
+      }
+      &:nth-child(3) {
+        transform: translateY(-11px) rotate(-135deg);
+      }
+    }
+  }
+}
+
+.top-image {
+  min-height: 100vh;
+  background: url(image/top1.jpg);
+  background-size: cover;
+  .text-center-toppage {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 140px;
+    text-align: center;
+
+    & > h1 {
+      color: black;
+      font-size: 60px;
+    }
+
+    & > h2 {
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+
+    .top-button {
+      background-color: #ff33ff;
+      border: none;
+      color: white;
+      width: 132px;
+      font-size: 20px;
+      margin-top: 80px;
+      margin-right: 20px;
+      padding: 0.5rem 1rem;
+      line-height: 1.5;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+}
+
+.signup-main {
+  height: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+  h2 {
+    margin-top: 30px;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    .signup-font {
+      font-size: 17px;
+    }
+  }
+  .top-button {
+    background-color: #ff33ff;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-right: 20px;
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .form-control {
+    margin-top: 10px;
+  }
+}
+
+//マイプロフィールページcss
+header {
+  .drop-menu {
+    color: white;
+    font-size: 25px;
+    padding-bottom: 20px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .drop-menu-style {
+    margin-bottom: 10px;
+  }
+}
+
+.card-body {
+  & >img {
+    width: 246px;
+    margin: 0px;
+  }
+}
+
+.profile-main {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 190px;
+  
+  #card-body {
+    margin-left: 15px;
+    .edit-btn {
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  .profile-icon {
+    margin-bottom: 50px;
+    width: 20%;
+
+    .card {
+      .top-user-log {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 15px;
+        background-color: black;
+        color: white;
+        padding: 5px 17.8px 5px 17.8px;
+        border-radius: 8px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .profile-tab {
+    margin: 0 auto;
+    .top-btn {
+      background-color: #ff33ff;
+      border: none;
+      color: white;
+      width: 70%;
+      font-size: 20px;
+      //   margin-top: 80px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding: 0.5rem 1rem;
+      line-height: 1.5;
+      border-radius: 10px;
+      cursor: pointer;
+      display: inline;
+      text-decoration: none;
+    }
+
+    #nav-tabContent {
+      margin-top: 30px;
+    }
+
+    #my-post-list {
+      border-top: #125d98 solid 1px;
+      margin-bottom: 30px;
+
+      #top-card {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+//ユーザープロフィール
+
+.profile-introduction {
+  padding-top: 40px;
+  padding-left: 30px;
+  &:before {
+    content: "";
+    background-color: #ff33ff;
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    top: 0;
+    z-index: -1;
+  }
+
+  .introduction-item {
+    padding-top: 30px;
+  }
+
+  .top-user-good {
+    color: #ff33ff;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-top: 80px;
+    font-size: 30px;
+    font-weight: bold;
+
+    & > button {
+      border: none;
+      background-color: transparent;
+      padding-left: 0px;
+    }
+  }
+}
+
+// TOPページスタイル
+
+.top-page {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  padding-top: 80px;
+
+  .top-title-arasi {
+    margin-top: 80px;
+    // font-size: 40px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 50px;
+    // font-size: 43px;
+
+    & > h2 {
+      font-size: 43px;
+    }
+    &:before {
+      content: "";
+      background-color: #e93b81;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .top-title2 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #f5abc9;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .top-title3 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #ffc107;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title4 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #fb3640;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title5 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #f7fd04;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title6 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #7952b3;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title7 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #e93b81;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title8 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #ffe227;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title9 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #e93b81;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title10 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #125d98;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title11 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #fb9300;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title12 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #867ae9;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title13 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #8328bb;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title14 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #8ab6d6;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title15 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #e1701a;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title16 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #185adb;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  .top-title17 {
+    // margin: 20px;
+    margin-top: 80px;
+    position: relative;
+    font-weight: normal;
+    display: block;
+    padding-top: 40px;
+    padding-left: 40px;
+    &:before {
+      content: "";
+      background-color: #fa163f;
+      display: block;
+      position: absolute;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  
+  
+  
+
+
+  .post-item {
+    margin-right: 50px;
+  }
+
+  .top-card {
+    margin-top: 30px;
+    .post-item__image-wrapper {
+        & > a {
+          & > img {
+            width: 300px;
+            height: 230px;
+            &:hover {
+              box-shadow: 5px 5px 5px rgb(0, 0, 0);
+              transform: translateY(-10px);
+              transition-duration: 0.5s;
+            }
+          }
+        }
+    }
+    .post-item__delete-wrapper {
+      margin-top: 15px;
+    }
+
+    .top-user-log {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      padding: 5px 17.8px 5px 17.8px;
+      border-radius: 8px;
+      margin-right: 5px;
+    }
+    .top-user-title {
+      width: 300px;
+    }
+    .top-user-good {
+      font-size: 20px;
+      margin-top: 15px;
+
+      & > button {
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+//my-profileの申請画面
+#my-post-list {
+  .top-card {
+    margin-top: 30px;
+    .post-item__image-wrapper {
+        & > a {
+          & > img {
+            width: 300px;
+            height: 230px;
+            // &:hover {
+            //   box-shadow: 5px 5px 5px rgb(0, 0, 0);
+            //   transform: translateY(-10px);
+            //   transition-duration: 0.5s;
+            // }
+          }
+        }
+    }
+    .post-item__delete-wrapper {
+      margin-top: 15px;
+    }
+  
+    .top-user-log {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      padding: 5px 17.8px 5px 17.8px;
+      border-radius: 8px;
+      margin-right: 5px;
+    }
+    .top-user-title {
+      width: 300px;
+    }
+    .top-user-good {
+      font-size: 20px;
+      margin-top: 15px;
+  
+      & > button {
+        border: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+//POSTページ
+
+.top-post {
+  margin: 0 auto;
+  width: 75%;
+  height: 990px;
+  padding-top: 190px;
+
+  .post-card {
+    margin: 15px 0;
+    & > p {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-control {
+    display: block;
+    width: 100%;
+  }
+
+  .btn-post {
+    background-color: #ff33ff;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+//ユーザープロフィール
+.top-user-title {
+  display: inline;
+}
+
+//ログイン状態によって画面表示を変える
+.visible-block {
+  display: block;
+}
+.hidden-block {
+  display: none;
+}
+
+//タブレット以上
+@media screen and (min-width: 600px) {
+  header {
+    .nav-item-hidden {
+      display: inline-block;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .nav-title-hidden {
+      padding: 10px 0;
+      margin-right: 30px;
+      font-size: 25px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      align-items: center;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .animate-title {
+    font-size: 60px;
+  } 
+
+  .top-image {
+    padding: 150px 0;
+    
+    .top-button {
+      width: 24%;
+    }
+  }
+
+  .profile-icon {
+    width: 200px;
+  }
+
+  .profile-main {
+    margin: 0 auto;
+    padding-top: 200px;
+    // width:  70%;
+
+    .profile-icon {
+      margin-bottom: 50px;
+      // width: 20%;
+    }
+    .profile-tab {
+      margin: 0 auto;
+      // width: 80%;
+      .top-btn {
+        background-color: #ff33ff;
+        border: none;
+        color: white;
+        width: 100%;
+        font-size: 20px;
+        margin-top: 0px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        padding: 0.5rem 1rem;
+        line-height: 1.5;
+        border-radius: 10px;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+      }
+    }
+
+    // .top-card {
+    //   & > img {
+    //     width: 300px;
+    //   }
+    // }
+
+    #my-post-list {
+      display: flex;
+      flex-wrap: wrap;
+      .post-item {
+        margin-right: 20px;
+      }
+    }
+  
+  }
+
+  .post-template {
+    .post-item {
+      margin-right: 50px;
+      width: 20%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  /* 600px以下に適用されるCSS（スマホ用） */
+  header {
+    .nav-title-hidden {
+      display: none;
+    }
+    .nav-bar {
+      width: 100%;
+      margin: 0;
+      padding: 10;
+
+      .nav-show-ul {
+        padding: 0;
+      }
+    }
+  }
+}
