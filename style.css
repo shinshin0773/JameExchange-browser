@@ -970,4 +970,8 @@ header .drop-menu-style {
   header .nav-bar .nav-show-ul {
     padding: 0;
   }
+  .profile-img-top {
+    width: 286px;
+    height: 286px;
+  }
 }
