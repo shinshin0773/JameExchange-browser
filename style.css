@@ -982,4 +982,7 @@ header .drop-menu-style {
   .form-wrapper {
     margin: 0 30px;
   }
+  .nav-item {
+    width: 100%;
+  }
 }
