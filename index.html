@@ -55,7 +55,9 @@
         <div class="top-image">
             <div class="text-center-toppage">
                 <section>
-                    <h1><div class="animate-title">JameExchange</div></h1>
+                    <h1>
+                        <div class="animate-title">JameExchange</div>
+                    </h1>
                 </section>
                 <h2>~名義集めに悩むジャニオタさんへのアプリ~</h2>
                 <a class="btn btn-lg top-button btn-signup signup-btn">新規登録</a>
@@ -97,7 +99,7 @@
                 <form id="login-form">
                     <div class="form-group login__email">
                         <label for="login-email" class="col-form-label">
-                            メールアドレス
+                            メールアドレス：
                         </label>
                         <div>
                             <input id="login-email" type="email" class="form-control" required>
@@ -105,7 +107,7 @@
                     </div>
                     <div class="form-group login__password">
                         <label for="login-password" class="col-form-label">
-                            パスワード
+                            パスワード：
                         </label>
                         <div>
                             <input id="login-password" type="password" class="form-control" required>
@@ -153,30 +155,52 @@
                 </div>
                 <form id="signup-form">
                     <div class="form-group">
-                        <label for="user_name" class="signup-font">名前</label>
+                        <label for="user_name" class="signup-font">名前：</label>
                         <input class="form-control" type="text" id="user-name">
                     </div>
                     <div class="form-group">
-                        <label for="user_email" class="signup-font">メールアドレス
-                            <button type="button" class="btn btn-tip" data-toggle="tooltip" data-placement="top" title="メールアドレスを入力したくない方は適当でいいですが、メモをして
-                            覚えておいてください。">？ </button>
+                        <label for="user_email"
+                            class="signup-font">メールアドレス：
                         </label>
+                        <!-- Trigger -->
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#myModal">❓
+                        </button>
+
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title"></h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>メールアドレス・パスワードは適当でかまいません。しかしメモをして必ず覚えておいてください。</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                         <input class="form-control" type="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="user_password" class="signup-font">パスワード
-                            <button type="button" class="btn btn-tip" data-toggle="tooltip" data-placement="top" title="必ずメモをして覚えていてください">
-                            ？
-                          </button>
+                        <label for="user_password" class="signup-font">パスワード：
                         </label>
                         <input class="form-control" type="password" id="password">
                     </div>
                     <div class="form-group">
-                        <label for="user_password" class="signup-font">取引用に使用したいTwitterアカウントID</label>
+                        <label for="user_password" class="signup-font">取引用に使用したいTwitterアカウントID：</label>
                         <input class="form-control" type="text" id="twitter-name">
                     </div>
                     <div class="form-group">
-                        <label for="user_password" class="signup-font">自己紹介</label>
+                        <label for="user_password" class="signup-font">自己紹介：</label>
                         <textarea class="form-control" id="profile-introduction" name="kanso" rows="4"
                             cols="40">（例）Kansai / u20　♡〇〇担♡</textarea>
                     </div>
@@ -185,7 +209,7 @@
                         <input class="form-control" type="password">
                     </div> -->
                     <div class="form-group" name="form1">
-                        <p for="fan_club" class="signup-font">ファンクラブ会員になっているグループ</p>
+                        <p for="fan_club" class="signup-font">ファンクラブ会員になっているグループ：</p>
                         <input type="checkbox" name="fanItem" value="木村拓哉">木村拓哉
                         <input type="checkbox" name="fanItem" value="TOKIO">TOKIO
                         <input type="checkbox" name="fanItem" value="KinKiKids">KinKiKids
@@ -206,7 +230,7 @@
                     </div>
                     <div class="form-group">
                         <p>
-                            <label for="user_Upload Image:" class="signup-font">アイコン設定</label>
+                            <label for="user_Upload Image:" class="signup-font">アイコン設定：</label>
                             <br>
                             <span style="font-size: 15px;">
                                 <input type="file" name="user[image_name]" id="user_image_name">
