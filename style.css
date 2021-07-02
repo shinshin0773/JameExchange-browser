@@ -246,6 +246,13 @@ header .nav-bar .nav-tab .nav-menu > span:last-child {
   margin-top: 10px;
 }
 
+.signup-main .btn.btn-info.btn-lg {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding: 5px;
+}
+
 header .drop-menu {
   color: white;
   font-size: 25px;
@@ -989,6 +996,6 @@ header .drop-menu-style {
     margin-left: 15px;
   }
   .profile-main {
-    padding-top: 80px;
+    padding-top: 15px;
   }
 }
