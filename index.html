@@ -90,7 +90,7 @@
         </header>
 
         <div class="row top-image signup-main">
-            <div class="col-sm-6 offset-sm-3">
+            <div class="col-sm-6 offset-sm-3 form-wrapper">
                 <div class="text-center">
                     <h1 class="signup-font">ログイン</h1>
                 </div>
@@ -147,7 +147,7 @@
         </header>
 
         <div class="row top-image signup-main">
-            <div class="col-sm-6 offset-sm-3">
+            <div class="col-sm-6 offset-sm-3 form-wrapper">
                 <div class="text-center">
                     <h1 class="signup-font">新規登録</h1>
                 </div>
@@ -157,11 +157,18 @@
                         <input class="form-control" type="text" id="user-name">
                     </div>
                     <div class="form-group">
-                        <label for="user_email" class="signup-font">メールアドレス</label>
+                        <label for="user_email" class="signup-font">メールアドレス
+                            <button type="button" class="btn btn-tip" data-toggle="tooltip" data-placement="top" title="メールアドレスを入力したくない方は適当でいいですが、メモをして
+                            覚えておいてください。">？ </button>
+                        </label>
                         <input class="form-control" type="email" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="user_password" class="signup-font">パスワード</label>
+                        <label for="user_password" class="signup-font">パスワード
+                            <button type="button" class="btn btn-tip" data-toggle="tooltip" data-placement="top" title="必ずメモをして覚えていてください">
+                            ？
+                          </button>
+                        </label>
                         <input class="form-control" type="password" id="password">
                     </div>
                     <div class="form-group">
