@@ -985,4 +985,7 @@ header .drop-menu-style {
   .nav-item {
     width: 100%;
   }
+  .top-page {
+    margin-left: 15px;
+  }
 }
