@@ -302,6 +302,8 @@ const createPostDiv = (postId, postData) => {
         //自己紹介を表示
         $(".user-profile-introduction").text(profileData.profileIntroduction);
 
+        $(".introduction-post-text").text(postData.postDescription);
+
         // プロフィールの表紙画面のURLをダウンロード
         downloadPostImage(profileData.ProfileImageLocation).then((url) => {
           $(".profile-img-top").attr({
