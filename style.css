@@ -226,6 +226,10 @@ header .nav-bar .nav-tab .nav-menu > span:last-child {
   font-size: 17px;
 }
 
+.signup-main .form-group .label-tag {
+  width: 100%;
+}
+
 .signup-main .top-button {
   background-color: #ff33ff;
   border: none;
