@@ -292,6 +292,10 @@ header .drop-menu-style {
   margin-bottom: 10px;
 }
 
+.profile-main .introduction-post > h2 {
+  color: #ffc107;
+}
+
 .profile-main .profile-icon {
   margin-bottom: 50px;
   width: 20%;
@@ -931,6 +935,9 @@ header .drop-menu-style {
   .top-image .top-button {
     width: 24%;
   }
+  .top-page .top-card {
+    width: 20%;
+  }
   .profile-icon {
     width: 200px;
   }
@@ -966,6 +973,7 @@ header .drop-menu-style {
   }
   .profile-main #my-post-list .post-item {
     margin-right: 20px;
+    width: 35%;
   }
   .post-template .post-item {
     margin-right: 50px;
@@ -989,6 +997,9 @@ header .drop-menu-style {
   .profile-img-top {
     width: 286px;
     height: 286px;
+  }
+  .form-wrapper {
+    margin: 0 30px;
   }
   .nav-item {
     width: 100%;
