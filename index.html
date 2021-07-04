@@ -21,6 +21,8 @@
     <!-- fontawesomeCDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <!-- firebaseのCSS -->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -63,6 +65,8 @@
                 <a class="btn btn-lg top-button btn-signup signup-btn">新規登録</a>
                 <a class="btn btn-lg top-button btn-login login-btn">ログイン</a>
 
+                <h1 style="text-align: center;">Firebase Auth for Twitter</h1>
+                <div id="firebaseui-auth-container"></div>
                 <!-- <button class="signInWithTwitter">Twitterログイン用</button> -->
             </div>
         </div>
@@ -161,12 +165,11 @@
                         <input class="form-control" type="text" id="user-name">
                     </div>
                     <div class="form-group">
-                        <label for="user_email"
-                            class="signup-font label-tag">メールアドレス：
+                        <label for="user_email" class="signup-font label-tag">メールアドレス：
 
                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                            data-target="#myModal">❓
-                             </button>
+                                data-target="#myModal">❓
+                            </button>
                         </label>
                         <!-- Trigger -->
 
@@ -829,12 +832,18 @@
                     </div>
                 </div>
                 <div class="introduction-post col-lg-8 col-md-6 col-sm-12">
-                   <h2>内容</h2>
-                   <h3 class="introduction-post-text"></h3>
+                    <h2>内容</h2>
+                    <h3 class="introduction-post-text"></h3>
                 </div>
             </div>
         </main>
     </div>
+
+   <!-- firebaseAuthのTwitterログインのためのCDN -->
+   <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
+  <script src="/js/config.js"></script>
 
     <!-- Firebaseのセットアップコード（下記のSDKのバージョンは6.2.0） -->
     <!-- The core Firebase JS SDK is always required and must be listed first
