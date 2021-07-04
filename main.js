@@ -1,6 +1,25 @@
 /* jshint curly:true, debug:true */
 /* globals $, firebase */
 
+//Firebase Twitterログインのための
+var uiConfig = {
+  // ログイン完了時のリダイレクト先
+  signInSuccessUrl: 'done.html',
+
+  // 利用する認証機能
+  signInOptions: [
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID
+  ],
+
+  // 利用規約のURL(任意で設定)
+  // tosUrl: 'http://example.com/kiyaku/',
+  // プライバシーポリシーのURL(任意で設定)
+  // privacyPolicyUrl: 'http://example.com/privacy'
+};
+
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
+ui.start('#firebaseui-auth-container', uiConfig);
+
 /**
  * -------------------
  * ボタンを押したらページを変更させる関連の処理
@@ -755,30 +774,7 @@ $("#signup-form").on("submit", (e) => {
 
 });
 
-// const signInWithGoogle = () => {
-//   var provider = new firebase.auth.TwitterAuthProvider();
-//   console.log('クリックされました');
-//   firebase
-//   .auth()
-//   .signInWithPopup(provider)
-//   .then((result) => {
-//    window.location.assign('./profile');
-//   }).catch((error) => {
-//     // Handle Errors here.
-//     var errorCode = error.code;
-//     var errorMessage = error.message;
-//     // The email of the user's account used.
-//     var email = error.email;
-//     // The firebase.auth.AuthCredential type that was used.
-//     var credential = error.credential;
-//     // ...
-//     console.log(error);
-//   });
-// }
 
-// $(".signInWithTwitter").on("click",() => {
-//   signInWithGoogle();
-// })
 
 // ログインフォームが送信されたらログインする
 $("#login-form").on("submit", (e) => {
