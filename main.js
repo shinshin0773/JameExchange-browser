@@ -755,30 +755,30 @@ $("#signup-form").on("submit", (e) => {
 
 });
 
-const signInWithGoogle = () => {
-  var provider = new firebase.auth.TwitterAuthProvider();
-  console.log('クリックされました');
-  firebase
-  .auth()
-  .signInWithPopup(provider)
-  .then((result) => {
-   window.location.assign('./profile');
-  }).catch((error) => {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-    console.log(error);
-  });
-}
+// const signInWithGoogle = () => {
+//   var provider = new firebase.auth.TwitterAuthProvider();
+//   console.log('クリックされました');
+//   firebase
+//   .auth()
+//   .signInWithPopup(provider)
+//   .then((result) => {
+//    window.location.assign('./profile');
+//   }).catch((error) => {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     // The email of the user's account used.
+//     var email = error.email;
+//     // The firebase.auth.AuthCredential type that was used.
+//     var credential = error.credential;
+//     // ...
+//     console.log(error);
+//   });
+// }
 
-$(".signInWithTwitter").on("click",() => {
-  signInWithGoogle();
-})
+// $(".signInWithTwitter").on("click",() => {
+//   signInWithGoogle();
+// })
 
 // ログインフォームが送信されたらログインする
 $("#login-form").on("submit", (e) => {
