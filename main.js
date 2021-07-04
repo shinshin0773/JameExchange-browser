@@ -669,6 +669,7 @@ firebase.auth().onAuthStateChanged((user) => {
 $("#signup-form").on("submit", (e) => {
   e.preventDefault();
 
+  //プロフィール情報を表示取得させる
   function profileRegistration() {
     //新規登録のフォームからValをとってくる
     const profileName = $("#user-name").val(); //user-nameを取得
@@ -732,6 +733,7 @@ $("#signup-form").on("submit", (e) => {
 
   profileRegistration();
 
+  //TODO
   //新規登録を試みる
   function signup() {
     let email = $("#email").val();
@@ -750,7 +752,33 @@ $("#signup-form").on("submit", (e) => {
   }
 
   signup();
+
 });
+
+const signInWithGoogle = () => {
+  var provider = new firebase.auth.TwitterAuthProvider();
+  console.log('クリックされました');
+  firebase
+  .auth()
+  .signInWithPopup(provider)
+  .then((result) => {
+   window.location.assign('./profile');
+  }).catch((error) => {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+    console.log(error);
+  });
+}
+
+$(".signInWithTwitter").on("click",() => {
+  signInWithGoogle();
+})
 
 // ログインフォームが送信されたらログインする
 $("#login-form").on("submit", (e) => {
